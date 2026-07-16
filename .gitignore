@@ -1,0 +1,11 @@
+__pycache__/*
+config/*
+dataset/*
+results/*
+training/*
+utils/*
+test-prediccion.py
+test-cuda.py
+test-dataset.py
+uploads/*
+api/*
