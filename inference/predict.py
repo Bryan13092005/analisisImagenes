@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-
+import os
 from PIL import Image
 
 from torchvision import transforms
@@ -22,8 +22,19 @@ transform = transforms.Compose([
     )
 ])
 
+BASE_DIR = os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))
+)
+
+MODEL_PATH = os.path.join(
+    BASE_DIR,
+    "models",
+    "modelo_final.pth"
+)
+
+
 checkpoint = torch.load(
-    "models/modelo_final.pth",
+    MODEL_PATH,
     map_location=DEVICE
 )
 
